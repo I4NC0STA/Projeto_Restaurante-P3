@@ -1,3 +1,4 @@
+/*
 create database bancobertis;
 use bancobertis;
 
