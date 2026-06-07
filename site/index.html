@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BETINS BAR</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="container">
+
+<button class="menu-btn">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+
+<div class="corner tl"></div>
+<div class="corner tr"></div>
+<div class="corner bl"></div>
+<div class="corner br"></div>
+
+<header>
+
+<header>
+
+<div class="betins">BETINS</div>
+
+<div class="bar">BAR</div>
+
+<div class="ano">DESDE 2024</div>
+
+</header>
+
+<div class="divisor"></div>
+
+<!-- CARROSSEL -->
+
+<div class="carousel">
+
+<div class="slide active">
+<h3>HAPPY HOUR</h3>
+<p>SEG A SEX • 17H ÀS 20H</p>
+</div>
+
+<div class="slide">
+<h3>DOUBLE DRINKS</h3>
+<p>CAIPIRINHAS EM DOBRO</p>
+</div>
+
+<div class="slide">
+<h3>DRINKS ESPECIAIS</h3>
+<p>COQUETÉIS ARTESANAIS</p>
+</div>
+
+</div>
+
+<!-- PETISCOS -->
+
+<div class="title">PETISCOS</div>
+
+<div class="item">
+<span>Batata Frita</span>
+<span class="price">R$ 28</span>
+</div>
+
+<div class="item">
+<span>Calabresa Acebolada</span>
+<span class="price">R$ 34</span>
+</div>
+
+<div class="item">
+<span>Frango a Passarinho</span>
+<span class="price">R$ 32</span>
+</div>
+
+<div class="item">
+<span>Onion Rings</span>
+<span class="price">R$ 30</span>
+</div>
+
+<!-- PRATOS -->
+
+<div class="title">PRATOS</div>
+
+<div class="item">
+<span>Burger Classic</span>
+<span class="price">R$ 42</span>
+</div>
+
+<div class="item">
+<span>Parmegiana</span>
+<span class="price">R$ 48</span>
+</div>
+
+<!-- BEBIDAS -->
+
+<div class="title">BEBIDAS</div>
+
+<div class="item">
+<span>Cervejas</span>
+<span class="price">R$ 10 - R$ 18</span>
+</div>
+
+<div class="item">
+<span>Drinks</span>
+<span class="price">R$ 20 - R$ 35</span>
+</div>
+
+<div class="item">
+<span>Caipirinhas</span>
+<span class="price">R$ 18</span>
+</div>
+
+<div class="item">
+<span>Refrigerantes</span>
+<span class="price">R$ 8</span>
+</div>
+
+<div class="item">
+<span>Água</span>
+<span class="price">R$ 6</span>
+</div>
+
+<footer>
+BETINS BAR • BOM AMBIENTE, BOA COMIDA E BONS DRINKS
+</footer>
+
+</div>
+
+<script>
+const slides = document.querySelectorAll(".slide");
+let atual = 0;
+
+setInterval(() => {
+
+slides[atual].classList.remove("active");
+
+atual++;
+
+if(atual >= slides.length){
+atual = 0;
+}
+
+slides[atual].classList.add("active");
+
+},4000);
+</script>
+
+</body>
+</html>
