@@ -2,27 +2,30 @@ package model;
 
 import java.util.ArrayList;
 import java.util.List;
+import interfaces.Pagavel;
 
-public class Pedido {
+//a classe Pedido representa um pedido feito no restaurante.
+// implementa a interface Pagavel, ou seja, é obrigada a ter o método pagar().
+public class Pedido implements Pagavel {
 
     private int id;
     private List<Produto> produtos;
 
+    //Construtor do pedido
     public Pedido(int id) {
         this.id = id;
 
-        //aqui cria uma lista vazia para armazenar os produtos
+        //Cria uma lista vazia para armazenar os produtos do pedido
         this.produtos = new ArrayList<>();
     }
 
-    // aqui adiciona um produto ao pedido
+    //Adiciona um produto dentro do pedido
     public void adicionarProduto(Produto produto) {
         produtos.add(produto);
     }
 
-    // calcula o valor total do pedido
+    //Calcula o valor total do pedido somando o preço de todos os produtos
     public double calcularTotal() {
-
         double total = 0;
 
         for (Produto produto : produtos) {
@@ -30,5 +33,11 @@ public class Pedido {
         }
 
         return total;
+    }
+
+    //Método obrigatório por causa da interface Pagavel
+    @Override
+    public void pagar() {
+        System.out.println("Pedido pago com sucesso!");
     }
 }
