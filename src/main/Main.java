@@ -66,7 +66,74 @@ public class Main {
         //   - chamar restaurante.cancelarPedido(pedido)
 
         System.out.println("Pedido #" + pedido.getNumero() + " aberto na mesa " + numMesa + ".");
-        System.out.println("(implementar menu do pedido aqui)");
+
+boolean pedidoAberto = true;
+
+while (pedidoAberto) {
+
+    System.out.println("\n====== MENU DO PEDIDO ======");
+    System.out.println("1. Adicionar item");
+    System.out.println("2. Ver pedido");
+    System.out.println("3. Fechar conta");
+    System.out.println("4. Cancelar pedido");
+    System.out.println("0. Voltar");
+    System.out.print("Escolha: ");
+
+    int op = lerInt();
+
+    switch (op) {
+
+        case 1:
+            restaurante.exibirCardapio();
+
+            System.out.print("Digite o ID do item: ");
+            int idItem = lerInt();
+
+            System.out.print("Quantidade: ");
+            int quantidade = lerInt();
+
+            restaurante.adicionarItemAoPedido(
+                    pedido,
+                    idItem,
+                    quantidade,
+                    ""
+            );
+
+            System.out.println("Item adicionado!");
+            break;
+
+        case 2:
+            pedido.exibirPedido();
+            break;
+
+        case 3:
+            pedido.exibirPedido();
+
+            System.out.print("Valor pago: R$ ");
+            double valorPago = lerDouble();
+
+            restaurante.fecharPedido(
+                    pedido,
+                    valorPago
+            );
+
+            pedidoAberto = false;
+            break;
+
+        case 4:
+            restaurante.cancelarPedido(pedido);
+            System.out.println("Pedido cancelado!");
+            pedidoAberto = false;
+            break;
+
+        case 0:
+            pedidoAberto = false;
+            break;
+
+        default:
+            System.out.println("Opcao invalida!");
+    }
+}
     }
 
     static int lerInt() {
