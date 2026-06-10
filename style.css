@@ -12,9 +12,9 @@ padding:20px;
 font-family:'Playfair Display', serif;
 }
 
-/* ==========================
+/* 
    MOLDURA
-========================== */
+ */
 
 .container{
 max-width:900px;
@@ -64,9 +64,9 @@ border-top:4px solid #c89b3c;
 border-top-left-radius:50px;
 }
 
-/* ==========================
+/*
    CABEÇALHO
-========================== */
+ */
 
 header{
 text-align:center;
@@ -141,9 +141,9 @@ margin:25px 0;
 opacity:.5;
 }
 
-/* ==========================
+/* 
    CARROSSEL
-========================== */
+*/
 
 .carousel{
 height:140px;
@@ -174,9 +174,9 @@ font-size:30px;
 margin-bottom:10px;
 }
 
-/* ==========================
+/* 
    TÍTULOS
-========================== */
+ */
 
 .title{
 color:#c89b3c;
@@ -187,9 +187,9 @@ border-bottom:2px solid #c89b3c;
 padding-bottom:5px;
 }
 
-/* ==========================
+/* =
    ITENS
-========================== */
+ */
 
 .item{
 display:flex;
@@ -208,9 +208,9 @@ color:#c89b3c;
 font-weight:bold;
 }
 
-/* ==========================
+/* 
    FOOTER
-========================== */
+ */
 
 footer{
 margin-top:30px;

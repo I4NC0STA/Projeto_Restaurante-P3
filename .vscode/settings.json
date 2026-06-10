@@ -1,3 +1,7 @@
 {
+<<<<<<< HEAD
     "livePreview.defaultPreviewPath": "/index.html"
+=======
+    "java.debug.settings.onBuildFailureProceed": true
+>>>>>>> 029ab46923407a50790130a711724c22c25fe2d6
 }
