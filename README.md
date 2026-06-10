@@ -61,4 +61,4 @@ src/
 
 ## Documentação completa
 
-Site da equipe: (link do Google Sites)
+Site da equipe: (https://sites.google.com/view/projeto-poo-unip-2026-1/in%C3%ADcio)
