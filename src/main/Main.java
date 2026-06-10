@@ -1,32 +1,5 @@
 package main;
 
-<<<<<<< HEAD
-
-import model.Pedido;
-import model.Produto;
-
-public class Main {
-
-    public static void main(String[] args) {
-
-        // Cria dois produtos do cardápio
-        Produto coca = new Produto(1, "Coca-Cola", 8.0);
-        Produto batata = new Produto(2, "Batata Frita", 20.0);
-
-        // Cria um pedido com ID 1
-        Pedido pedido = new Pedido(1);
-
-        // Adiciona os produtos ao pedido
-        pedido.adicionarProduto(coca);
-        pedido.adicionarProduto(batata);
-
-        // Calcula e exibe o valor total do pedido
-        System.out.println("Total do pedido: R$ " + pedido.calcularTotal());
-
-        // Executa o método pagar()
-        // Esse método existe porque Pedido implementa a interface Pagavel
-        pedido.pagar();
-=======
 import exception.MesaIndisponivelException;
 import java.util.Scanner;
 import model.*;
@@ -92,9 +65,9 @@ public class Main {
 
             System.out.println(
                     "Pedido #" +
-                    pedido.getNumero() +
-                    " aberto na mesa " +
-                    numMesa
+                            pedido.getNumero() +
+                            " aberto na mesa " +
+                            numMesa
             );
 
         } catch (MesaIndisponivelException e) {
@@ -156,7 +129,7 @@ public class Main {
 
                         System.out.println(
                                 "ERRO: " +
-                                e.getMessage()
+                                        e.getMessage()
                         );
 
                     }
@@ -197,7 +170,7 @@ public class Main {
 
                         System.out.println(
                                 "ERRO: " +
-                                e.getMessage()
+                                        e.getMessage()
                         );
 
                     }
@@ -221,7 +194,7 @@ public class Main {
 
                         System.out.println(
                                 "ERRO: " +
-                                e.getMessage()
+                                        e.getMessage()
                         );
 
                     }
@@ -366,6 +339,5 @@ public class Main {
         restaurante.adicionarMesa(new Mesa(2, 4));
         restaurante.adicionarMesa(new Mesa(3, 4));
         restaurante.adicionarMesa(new Mesa(4, 6));
->>>>>>> 029ab46923407a50790130a711724c22c25fe2d6
     }
 }
