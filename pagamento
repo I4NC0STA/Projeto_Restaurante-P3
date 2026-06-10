@@ -11,3 +11,34 @@ public enum FormaPagamento {
 
     public String getDescricao() { return descricao; }
 }
+
+
+public class Pagamento {
+    private Pedido pedido;
+    private FormaPagamento forma;
+    private double valorPago;
+ 
+    public Pagamento(Pedido pedido, FormaPagamento forma, double valorPago) {
+        this.pedido    = pedido;
+        this.forma     = forma;
+        this.valorPago = valorPago;
+    }
+ 
+    public double getTroco() {
+        if (forma == FormaPagamento.DINHEIRO) {
+            return valorPago - pedido.getTotal();
+        }
+        return 0;
+    }
+ 
+    public boolean isValido() {
+        if (forma == FormaPagamento.DINHEIRO) {
+            return valorPago >= pedido.getTotal();
+        }
+        return true;
+    }
+ 
+    public Pedido getPedido()        { return pedido; }
+    public FormaPagamento getForma() { return forma; }
+    public double getValorPago()     { return valorPago; }
+}
